@@ -1,0 +1,14 @@
+C:\Users\nazzi\Desktop\lab1\bin\Debug\net8.0\UniversityApp.exe
+C:\Users\nazzi\Desktop\lab1\bin\Debug\net8.0\UniversityApp.deps.json
+C:\Users\nazzi\Desktop\lab1\bin\Debug\net8.0\UniversityApp.runtimeconfig.json
+C:\Users\nazzi\Desktop\lab1\bin\Debug\net8.0\UniversityApp.dll
+C:\Users\nazzi\Desktop\lab1\bin\Debug\net8.0\UniversityApp.pdb
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.AssemblyInfoInputs.cache
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.AssemblyInfo.cs
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.csproj.CoreCompileInputs.cache
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.dll
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\refint\UniversityApp.dll
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.pdb
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\UniversityApp.genruntimeconfig.cache
+C:\Users\nazzi\Desktop\lab1\obj\Debug\net8.0\ref\UniversityApp.dll
