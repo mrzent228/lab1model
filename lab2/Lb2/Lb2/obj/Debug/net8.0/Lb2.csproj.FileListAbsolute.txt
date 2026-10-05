@@ -1,0 +1,14 @@
+C:\Users\Home\source\repos\Lb2\Lb2\bin\Debug\net8.0\Lb2.exe
+C:\Users\Home\source\repos\Lb2\Lb2\bin\Debug\net8.0\Lb2.deps.json
+C:\Users\Home\source\repos\Lb2\Lb2\bin\Debug\net8.0\Lb2.runtimeconfig.json
+C:\Users\Home\source\repos\Lb2\Lb2\bin\Debug\net8.0\Lb2.dll
+C:\Users\Home\source\repos\Lb2\Lb2\bin\Debug\net8.0\Lb2.pdb
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.AssemblyInfoInputs.cache
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.AssemblyInfo.cs
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.dll
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\refint\Lb2.dll
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.pdb
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\Lb2.genruntimeconfig.cache
+C:\Users\Home\source\repos\Lb2\Lb2\obj\Debug\net8.0\ref\Lb2.dll
