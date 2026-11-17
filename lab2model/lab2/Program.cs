@@ -1,76 +1,50 @@
 using System;
 using System.Text;
-using UniversityDomainApp.Models;
+using UniversityUseCaseApp.Services;
 
-namespace UniversityDomainApp
+namespace UniversityUseCaseApp
 {
     class Program
     {
         static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
 
-            // 1. Створення груп
-            var pd32 = new Group("ПД-32");
-            var pd33 = new Group("ПД-33");
+            var service = new UniversityUseCaseService();
 
-            // 2. Створення студентів та асоціація з групою (1 до 0..*)
-            var nazar = new Student("Синявський Назар");
-            var rodion = new Student("Тараканов Родіон");
-            var roman = new Student("Трошкін Роман");
+            // Ініціалізація початкових даних через прецеденти
+            service.CreateGroup("ПД-32");
+            service.CreateGroup("ПД-33");
 
-            pd32.AddStudent(nazar);
-            pd32.AddStudent(rodion);
-            pd32.AddStudent(roman);
+            var nazar = service.UC1_RegisterStudent("Синявський Назар", "ПД-32");
+            var rodion = service.UC1_RegisterStudent("Тараканов Родіон", "ПД-32");
+            var roman = service.UC1_RegisterStudent("Трошкін Роман", "ПД-32");
 
-            // 3. Видача студентських квитків (1 до 0..1)
-            nazar.AssignCard(new StudentCard("ST-1001", new DateTime(2024, 9, 1)));
-            rodion.AssignCard(new StudentCard("ST-1002", new DateTime(2024, 9, 1)));
-            roman.AssignCard(new StudentCard("ST-1003", new DateTime(2024, 9, 1)));
+            var c1 = service.UC3_AddCourse("Програмування", 5);
+            var c2 = service.UC3_AddCourse("Бази даних", 4);
+            var c3 = service.UC3_AddCourse("Вища математика", 3);
 
-            // 4. Створення курсів та запис студентів (асоціація через Enrollment)
-            var programming = new Course("Програмування", 5);
-            var databases = new Course("Бази даних", 4);
-            var math = new Course("Вища математика", 3);
+            Console.WriteLine();
+            service.UC4_EnrollStudent(nazar.Id, c1.Id);
+            service.UC4_EnrollStudent(nazar.Id, c2.Id);
+            service.UC4_EnrollStudent(rodion.Id, c1.Id);
+            service.UC4_EnrollStudent(roman.Id, c3.Id);
 
-            nazar.EnrollInCourse(programming, 95);
-            nazar.EnrollInCourse(databases, 88);
+            // Перевірка альтернативного потоку (повторний запис)
+            service.UC4_EnrollStudent(nazar.Id, c1.Id);
 
-            rodion.EnrollInCourse(programming, 91);
-            rodion.EnrollInCourse(math, 84);
+            Console.WriteLine();
+            service.UC5_SetGrade(nazar.Id, c1.Id, 95);
+            service.UC5_SetGrade(nazar.Id, c2.Id, 88);
+            service.UC5_SetGrade(rodion.Id, c1.Id, 91);
+            service.UC5_SetGrade(roman.Id, c3.Id, 90);
 
-            roman.EnrollInCourse(databases, 77);
-            roman.EnrollInCourse(math, 90);
-
-            // 5. Виведення інформації навігацією по об'єктній моделі
-            Console.WriteLine("=== Групи та їхні студенти ===");
-            foreach (var group in new[] { pd32, pd33 })
-            {
-                Console.WriteLine($"Група {group.Name} (студентів: {group.Students.Count}):");
-                foreach (var st in group.Students)
-                {
-                    Console.WriteLine($"  - {st.FullName} | Квиток: {st.Card?.CardNumber ?? "немає"}");
-                }
-            }
-
-            Console.WriteLine("\n=== Успішність студентів за дисциплінами ===");
-            foreach (var course in new[] { programming, databases, math })
-            {
-                Console.WriteLine($"Курс: {course.Title} ({course.Credits} кредитів):");
-                foreach (var enr in course.Enrollments)
-                {
-                    Console.WriteLine($"  - {enr.Student.FullName} ({enr.Student.Group.Name}) -> Оцінка: {enr.Grade}");
-                }
-            }
-
-            Console.WriteLine($"\n=== Картка студента: {nazar.FullName} ===");
-            Console.WriteLine($"Група: {nazar.Group.Name}");
-            Console.WriteLine($"Студентський квиток: № {nazar.Card.CardNumber} (виданий {nazar.Card.IssueDate:dd.MM.yyyy})");
-            Console.WriteLine("Записаний на курси:");
-            foreach (var enr in nazar.Enrollments)
-            {
-                Console.WriteLine($"  * {enr.Course.Title} ({enr.Course.Credits} кред.) — оцінка: {enr.Grade}");
-            }
+            // Перегляд заліковки студента (UC-7)
+            service.UC7_PrintGradebook(nazar.Id);
+            service.UC7_PrintGradebook(rodion.Id);
+            service.UC7_PrintGradebook(roman.Id);
+            Console.ReadLine();
         }
     }
 }
