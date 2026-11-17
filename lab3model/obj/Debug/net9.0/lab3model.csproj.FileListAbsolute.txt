@@ -1,0 +1,14 @@
+C:\Users\nazzi\source\repos\lab3model\lab3model\bin\Debug\net9.0\lab3model.exe
+C:\Users\nazzi\source\repos\lab3model\lab3model\bin\Debug\net9.0\lab3model.deps.json
+C:\Users\nazzi\source\repos\lab3model\lab3model\bin\Debug\net9.0\lab3model.runtimeconfig.json
+C:\Users\nazzi\source\repos\lab3model\lab3model\bin\Debug\net9.0\lab3model.dll
+C:\Users\nazzi\source\repos\lab3model\lab3model\bin\Debug\net9.0\lab3model.pdb
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.AssemblyInfoInputs.cache
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.AssemblyInfo.cs
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.csproj.CoreCompileInputs.cache
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.dll
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\refint\lab3model.dll
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.pdb
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\lab3model.genruntimeconfig.cache
+C:\Users\nazzi\source\repos\lab3model\lab3model\obj\Debug\net9.0\ref\lab3model.dll
